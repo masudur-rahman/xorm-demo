@@ -13,6 +13,7 @@ func main() {
 	println("\n\n\n\n")
 
 	fmt.Println("Running using `xorm.io/xorm`\n ")
+	// panics
 	xormioTest()
 }
 

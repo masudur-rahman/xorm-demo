@@ -12,7 +12,7 @@ import (
 
 const (
 	HOST     = "localhost"
-	PORT     = 5432
+	PORT     = 5431
 	USER     = "postgres"
 	PASSWORD = "postgres"
 	NAME     = "xorm-demo"

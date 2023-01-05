@@ -7,12 +7,11 @@ import (
 
 	"github.com/go-xorm/xorm"
 	_ "github.com/lib/pq"
-	//"xorm.io/xorm"
 )
 
 const (
 	HOST     = "localhost"
-	PORT     = 5432
+	PORT     = 5431
 	USER     = "postgres"
 	PASSWORD = "postgres"
 	NAME     = "xorm-demo"
