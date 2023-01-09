@@ -9,7 +9,7 @@ type User struct {
 
 type Address struct {
 	City    string
-	Country string
+	Country []string
 }
 
 func CreateUser(user *User) (*User, error) {

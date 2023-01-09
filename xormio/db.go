@@ -50,6 +50,7 @@ func Close() {
 func syncTables(en *xorm.Engine) {
 	err := en.Sync(
 		new(User),
+		new(Contract),
 	)
 	if err != nil {
 		log.Println("creation error", err)

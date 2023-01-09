@@ -13,7 +13,6 @@ func main() {
 	println("\n\n\n\n")
 
 	fmt.Println("Running using `xorm.io/xorm`\n ")
-	// panics
 	xormioTest()
 }
 
@@ -52,7 +51,7 @@ func xormioTest() {
 		Email: "masud@appscode.com",
 		Address: xormio.Address{
 			City:    "Dhaka",
-			Country: "Bangladesh",
+			Country: []string{"Bangladesh"},
 		},
 	})
 	if err != nil {
@@ -65,6 +64,28 @@ func xormioTest() {
 	if err != nil {
 		panic(err)
 	}
-
 	fmt.Printf("%+v", users)
+
+	println("\n\n\n\n")
+
+	cd, err := xormio.AddContract(xormio.Contract{
+		UID:       1,
+		OrgOrUser: "ac",
+		Cluster:   "asd",
+		Product:   "adf",
+		Emails: xormio.ContractEmail{
+			ContactPerson: []string{"hello"},
+		},
+	})
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Printf("%+v", cd)
+	cds, err := xormio.ListContracts(0)
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Printf("%+v", cds)
 }
